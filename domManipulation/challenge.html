@@ -1,0 +1,132 @@
+
+<!--
+    Challenge yourself
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+
+    .main {
+        width: 250px;
+        height: 20px;
+        color:antiquewhite;
+        background-color: black;
+    }
+</style>
+<body>
+    
+    <div class="header">
+    </div>
+    <section id="container">
+        
+        <ul>
+            <p id="demo"></p>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol id=listas>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">footer
+    </div>
+
+    
+
+    <div>
+        <button id="jsstyle" onclick="selectNoQ()">Select container - NoQ</button>
+    </div>
+    <div>
+        <button id="jsstyle" onclick="selectQuery()">Select container - Query</button>
+    </div>
+    <div>
+        <button id="jsstyle" onclick="selectSecond()">Select "second" item list</button>
+    </div>
+    <div>
+        <button id="jsstyle" onclick="selectol3()">Select "Thirsrd" OL</button>
+    </div>
+    <div>
+        <button id="jsstyle" onclick="hello()">Hello</button>
+    </div>
+    <div>
+        <button id="jsstyle" onclick="footerAdd()">Add class main footer</button>
+    </div>
+    <div>
+        <button id="jsstyle" onclick="footerRem()">Remove class main footer</button>
+    </div>
+    <div>
+        <button id="jsstyle" onclick="addLi()">Add element to list</button>
+    </div>
+    <div>
+        <button id="jsstyle" onclick="liOl()">Challenge color list</button>
+    </div>
+    <div>
+        <button id="jsstyle" onclick="remove()">Deler Div</button>
+    </div>
+    
+
+    <script>
+        function selectNoQ() {
+            document.getElementById('container').style.backgroundColor = "green";
+        }
+        function selectQuery() {
+            document.querySelector("#container").style.backgroundColor = "red";
+        }
+        function selectSecond() {
+            var y = document.getElementsByClassName("second");
+            var i;
+            for(i=0; i< y.length; i++){
+                y[i].style.backgroundColor = "blue";
+            }
+        }
+        function selectol3(){
+            document.querySelector("#container ol .third").style.backgroundColor = "yellow";
+        }
+        function hello(){
+            document.getElementById("demo").innerHTML = "Hello";
+        }
+        function footerAdd(){
+            
+            document.getElementsByClassName("footer")[0].classList.add("main");
+        }
+        function footerRem(){
+            document.getElementsByClassName("footer")[0].classList.remove("main");
+        }
+        function addLi(){
+
+            var x = document.createElement("li");
+            var t = document.createTextNode("four");
+
+            x.appendChild(t);
+            document.querySelector("#container ul").appendChild(x);
+        }
+
+        
+        function liOl(){
+
+            var lists = document.getElementsByTagName("ol");
+            for (var k = 0; k < lists.length; ++k) {
+                lists[k].style.backgroundColor = "green";
+            }
+        }
+        function remove(){
+
+            var el = document.querySelectorAll('div.footer');
+            el[0].parentNode.removeChild(el[0]);
+        }
+        
+        
+    </script>
+
+</body>
+
+</html>
