@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "axios": "^0.25.0"
+  },
+  "name": "npm-practice",
+  "description": "primero",
+  "version": "1.0.0",
+  "main": "delete_user.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/generation-org/NPM-Practice.git"
+  },
+  "author": "Salvador",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/generation-org/NPM-Practice/issues"
+  },
+  "homepage": "https://github.com/generation-org/NPM-Practice#readme"
+}
